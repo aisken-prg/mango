@@ -1,0 +1,115 @@
+@define-color bg    #1a1b26; 
+@define-color fg    #a9b1d6; 
+@define-color blk   #32344a; 
+@define-color red   #f7768e; 
+@define-color grn   #9ece6a; 
+@define-color ylw   #e0af68; 
+@define-color blu   #7aa2f7; 
+@define-color mag   #ad8ee6; 
+@define-color cyn   #0db9d7; 
+@define-color brblk #444b6a; 
+@define-color text #ffffff; 
+
+@import "./rose-pine.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: @base;
+    color: @text;
+    padding: 0px 2px;
+    border: 1px solid @iris;
+}
+
+#window {
+    margin-left: 10px;
+
+}
+
+#workspaces {
+
+}
+
+#workspaces button {
+    padding: 0 16px;
+    color: #bab8ce;
+}
+#workspaces button.active {
+    color: @text;
+    font-size: 14px;
+    border-radius: 0;
+    border-bottom: 4px solid #89b4fa;
+}
+#workspaces button.empty {
+    color: #bab8ce;
+}
+#workspaces button.empty.active {
+    color: @text;
+}
+
+#workspaces button.urgent {
+    background-color: @highlightHigh;
+}
+
+button:hover {
+    background: inherit;
+}
+
+#clock {
+        margin-right: 6px;
+}
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @text;
+}
+
+#custom-sep {
+    color: @iris;
+}
+
+#clock {
+    color: @rose;
+    padding: 0 5px;
+}
+
+#battery {
+    color: @mag;
+}
+
+#disk {
+    color: @ylw;
+}
+
+#memory {
+    color: @mag;
+}
+
+#cpu {
+    color: @grn;
+}
+
+#network {
+    color: @blu;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#wireplumber {
+    color: @foam;
+}
+
+#temperature {
+    color: @love;
+}
